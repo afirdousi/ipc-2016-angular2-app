@@ -1,0 +1,64 @@
+
+.selected {
+    background-color: #1e671e !important;
+    color: white;
+}
+
+.best{
+    background-color: #ffe9ec !important;
+    font-weight: bold;
+    color:#000;
+}
+
+.best::after{
+    content:'❤';
+    color:red;
+}
+
+.talks {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 20em;
+}
+
+.talks li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: 0.3em 0.3em 0.3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.talks li.selected:hover {
+    background-color: #2c7c2c !important;
+    color: white;
+}
+.talks li:hover {
+    color: #378537;
+    background-color: #DDD;
+    left: .1em;
+}
+.talks .text {
+    position: relative;
+    top: -3px;
+}
+.talks .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #82d082;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}

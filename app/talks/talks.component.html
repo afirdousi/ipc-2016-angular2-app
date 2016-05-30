@@ -1,0 +1,43 @@
+<h3>Talks</h3>
+<p>
+    <b>0</b>
+    <input type="range" min="0" max="100" step="1"
+           [value]="sliderValue"
+           (input)="sliderValue = $event.target.value" />
+    <b> 100 mins</b> (Talks longer than {{sliderValue}} mins)<br>
+</p>
+<ul class="talks">
+    <li *ngFor="let t of talks | talkPipe:sliderValue" (click)="selectTalk(t)" [class.selected]="selectedTalk===t" [class.best]="bestTalk===t">
+
+        <span class="badge">
+            {{t.id}}
+        </span>
+        {{ t.title }}
+
+    </li>
+</ul>
+<hr/>
+<ipc-talk [talk]="selectedTalk" *ngIf="selectedTalk" (mark)="onMarkBest($event)"></ipc-talk>
+
+
+<h2>What we coverd?</h2>
+<ul>
+    <li>
+        import/export
+    </li>
+    <li>
+        Components
+    </li>
+    <li>
+        Nested Components
+    </li>
+    <li>
+        Communication b/w Components
+    </li>
+    <li>
+        Services
+    </li>
+    <li>
+        Pipes
+    </li>
+</ul>
